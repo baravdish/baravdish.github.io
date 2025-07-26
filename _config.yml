@@ -1,4 +1,4 @@
-#theme: minima
-remote_theme: minima
+theme: minima
+# remote_theme: asd
 title: The small things in life
 description: .
