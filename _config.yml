@@ -1,15 +1,17 @@
-theme: minima
-#title: The small things in life
-#description: "A simple blog about my thoughts and projects."
-#remote_theme: mmistakes/minimal-mistakes
-#defaults:
-#  - scope:
-#      path: ""
-#      type: posts
-#    values:
-#      layout: single
-#      author_profile: false # We'll use a custom sidebar instead
-#      sidebar:
-#        - title: "Highlights"
-#          html: "{% include sidebar.html %}"
+# theme: minima
+title: The small things in life
+description: "A simple blog about my thoughts and projects."
+remote_theme: mmistakes/minimal-mistakes
 
+# -- Defaults --
+# Set default values for layouts and posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false # We'll use a custom sidebar instead
+      sidebar:
+        - title: "Highlights"
+          html: "{% include custom-sidebar.html %}"
