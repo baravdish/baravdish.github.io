@@ -1,0 +1,13 @@
+<script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+
+{%- if site.search == true or page.search == true -%}
+  {%- include search/search_scripts.html -%}
+{%- endif -%}
+
+{% if site.footer.links %}
+  <script>
+    document.querySelectorAll(".page__footer-copyright .sep").forEach(function(el) {
+      el.textContent = "|";
+    });
+  </script>
+{% endif %}
