@@ -9,7 +9,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false # We'll use a custom sidebar instead
+      author_profile: true # We'll use a custom sidebar instead
       sidebar:
         - title: "Highlights"
           html: "{% include sidebar.html %}"
