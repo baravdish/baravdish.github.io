@@ -1,5 +1,8 @@
-theme: minima
-title: The small things in life
+# theme: minima
+title: The very small things
+remote_theme: mmistakes/minimal-mistakes
+url: "https://baravdish.github.io"
+baseurl: ""
 # description: "A simple blog about my thoughts and projects."
 # remote_theme: mmistakes/minimal-mistakes
 
