@@ -4,4 +4,4 @@ title: "About Me"
 permalink: /about/
 ---
 
-Hi I'm Gabriel.
+Hi I'm Gabriel. Here is my [my linkedin](linkedin.com/in/gabriel-baravdish-8a748390) for contact info or email.
