@@ -11,23 +11,23 @@ I have a private repo called `my-awesome-linux-setup`. Whenever I upgrade or get
 
 Some of my favorite tools are:
 
-zsh
-oh my zsh (basically a UX layer of zsh, with plugins such as zsh-autosuggestions, history, git, etc.)
-tree
-vscode
-sublime-text (for note-taking - my previous IDE, now used for quick notes due to old habit)
-darktable (for viewing HDR or .exr images)
-LM-studio (a private LLM chat app, thinking of making a tutorial of it later on)
-Backblaze (cheap AWS, cloud bucket sync of all my data and datasets)
-blender
-zotero (for organizing papers)
-cuda (I love GPU programming)
-pip (moving over to uv soon)
-docker
-obsidian
-vlc
-htop or btop
-ulauncher
+- zsh
+- oh my zsh (basically a UX layer of zsh, with plugins such as zsh-autosuggestions, history, git, etc.)
+- tree
+- vscode
+- sublime-text (for note-taking - my previous IDE, now used for quick notes due to old habit)
+- darktable (for viewing HDR or .exr images)
+- LM-studio (a private LLM chat app, thinking of making a tutorial of it later on)
+- Backblaze (cheap AWS, cloud bucket sync of all my data and datasets)
+- blender
+- zotero (for organizing papers)
+- cuda (I love GPU programming)
+- pip (moving over to uv soon)
+- docker
+- obsidian
+- vlc
+- htop or btop
+- ulauncher
 
 I also grab a bunch of scripts for crontab jobs to mount to my Backblaze buckets or sync to the cloud.
 
