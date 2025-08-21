@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "My favorite Linux setup"
 ---
 

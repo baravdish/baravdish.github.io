@@ -1,9 +1,13 @@
-theme: minima
 title: The very small things
 # remote_theme: mmistakes/minimal-mistakes
+description: >-
+	 
 url: "https://baravdish.github.io"
 baseurl: ""
-# description: "A simple blog about my thoughts and projects."
+theme: minima
+plugins:
+  - jekyll-feed
+
 # remote_theme: mmistakes/minimal-mistakes
 
 # -- Defaults --
