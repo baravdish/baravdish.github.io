@@ -3,8 +3,6 @@ layout: post
 title: "My favorite Linux setup"
 ---
 
-## My favorite Linux setup
-
 So I run Linux on all my machines, both at office and work. It started when one of my projects during my PhD required development in Linux, then another, and another...and one day I decided to just get rid of Windows and move over entirely. It is always a struggle at first. But little by little you learn the tricks (read: issues) and get comfortable.
 
 Settled with Ubuntu/Canonical after trying a lot of distros, mostly because they have shipped the good and stable kernels and graphics updates. I just want everything to work. It works. And I stick with whatever works well. To not forget the golden rule: If it works, don't touch it.
