@@ -7,7 +7,7 @@ So I run Linux on all my machines, both at office and work. It started when one 
 
 Settled with Ubuntu/Canonical after trying a lot of distros, mostly because they have shipped the good and stable kernels and graphics updates. I just want everything to work. It works. And I stick with whatever works well. To not forget the golden rule: If it works, don't touch it.
 
-I have a private repo called `my-awesome-linux-setup`. Whenever I upgrade or get a new machine I just grab the scripts that I have stored there and run them. It is so convenient to have your setup replicated and mirrored everywhere.
+I have a private repo called *my-awesome-linux-setup*. Whenever I upgrade or get a new machine I just grab the scripts that I have stored there and run them. It is so convenient to have your setup replicated and mirrored everywhere.
 
 Some of my favorite tools are:
 
@@ -17,7 +17,7 @@ Some of my favorite tools are:
 - vscode
 - sublime-text (for note-taking - my previous IDE, now used for quick notes due to old habit)
 - darktable (for viewing HDR or .exr images)
-- LM-studio (a private LLM chat app, thinking of making a tutorial of it later on)
+- LM-studio (a local and private LLM chat app, thinking of making a tutorial of it later on)
 - Backblaze (cheap AWS, cloud bucket sync of all my data and datasets)
 - blender
 - zotero (for organizing papers)
