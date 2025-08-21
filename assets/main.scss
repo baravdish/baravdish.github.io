@@ -1,4 +1,23 @@
-/* Custom two-column layout styles */
+---
+---
+@import "minima";
+
+/* Title size overrides */
+.site-title {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.post-title, .page-title, h1 {
+  font-size: 2.2rem;
+  line-height: 1.25;
+}
+@media (min-width: 768px) {
+  .site-title { font-size: 2.25rem; }
+  .post-title, .page-title, h1 { font-size: 2.5rem; }
+}
+
+/* Your existing custom layout styles */
+ /* Custom two-column layout styles */
 .custom-wrapper {
   max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
@@ -9,21 +28,11 @@
   display: flex;
   gap: 30px;
 }
-
-.main-content-col {
-  width: 70%;
-}
-
-.sidebar-col {
-  width: 30%;
-}
+.main-content-col { width: 70%; }
+.sidebar-col { width: 30%; }
 
 /* On smaller screens, stack the columns */
 @media screen and (max-width: 800px) {
-  .custom-wrapper {
-    flex-direction: column;
-  }
-  .main-content-col, .sidebar-col {
-    width: 100%;
-  }
+  .custom-wrapper { flex-direction: column; }
+  .main-content-col, .sidebar-col { width: 100%; }
 }
