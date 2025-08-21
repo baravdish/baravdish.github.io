@@ -1,7 +1,16 @@
 
 
-- Some of my favorite github repos:
-- yt-dlp
+- Some of my favorite github repos that I use to checkin:
+- NVIDIA/cccl
+- NVIDIA/cutlass
+- pytorch
+- pytorch3d
+- mitsuba3
+- pbrt-v4
+- slang
+- abraunegg/onedrive 
+- llama.cpp
 - ollama
-- onedrive-sync
-- ...
+- zed
+- firecrawl
+- tldraw
