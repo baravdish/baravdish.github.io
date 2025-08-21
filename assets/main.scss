@@ -12,12 +12,13 @@
   line-height: 1.25;
 }
 
-.site-header {
-  margin-top: 1rem;
-}
+// .site-header {
+//   margin-top: 1rem;
+// }
 
 body {
-  background-color: beige;
+  padding-top: 1rem; /* ~16px; adjust */
+  background-color: rgb(240, 226, 182);
 }
 
 @media (min-width: 768px) {
