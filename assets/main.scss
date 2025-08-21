@@ -18,7 +18,14 @@
 
 body {
   padding-top: 1rem; /* ~16px; adjust */
-  background-color: rgb(240, 226, 182);
+  background-color: rgb(238, 229, 201);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+               "Noto Sans", "Liberation Sans", "DejaVu Sans", sans-serif;
+}
+
+/* In case something sets posts to serif, force inheritance */
+.post-content, .post-title, .page-content {
+  font-family: inherit;
 }
 
 @media (min-width: 768px) {
