@@ -24,9 +24,34 @@ body {
                "Noto Sans", "Liberation Sans", "DejaVu Sans", sans-serif;
 }
 
-/* In case something sets posts to serif, force inheritance */
-.post-content, .post-title, .page-content {
-  font-family: inherit;
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+               "Noto Sans", "Liberation Sans", "DejaVu Sans", sans-serif;
+}
+
+.post-content,
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6,
+.post-content p, .post-content li, .post-content blockquote,
+.post-content table, .post-content th, .post-content td,
+.post-content code, .post-content pre {
+  font-family: var(--font-sans);
+}
+
+/* Ensure titles match too */
+.post-title, .page-title { font-family: var(--font-sans); }
+/* Ensure links are styled consistently */
+.post-content a, .post-content a:visited {
+  color: #007bff; /* Adjust as needed */
+  text-decoration: none;
+}
+.post-content a:hover, .post-content a:focus {
+  text-decoration: underline;
+}
+.post-content pre {
+  background-color: #f8f9fa; /* Light background for code blocks */
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow-x: auto; /* Allow horizontal scrolling */
 }
 
 @media (min-width: 768px) {
