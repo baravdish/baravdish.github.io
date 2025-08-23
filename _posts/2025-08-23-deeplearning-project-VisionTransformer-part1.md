@@ -3,20 +3,20 @@ layout: post
 title: "Deep learning project - Vision Transformer part 1"
 ---
 
-Some time has passed now since I started to follow AI, LLM, transformer, AE, VAE, etc. and watch the exploding trend of applications unfold within image processing, computer vision and computer grahpics. It is fascinating what we accomplish once we develop new tools and start to play with them.
+Some time has passed now since I started to follow AI, LLM, transformer, AE, VAE, etc. and watch the exploding trend of applications unfold within image processing, computer vision and computer graphics. It is fascinating what we accomplish once we develop new tools and start to play with them.
 
-Since I have seen what the transformer architecture is capable of and its fundamental role in LLMs (for you who don't know what those are they are the engine within ChatGPT/Gemini/Claude/Deepseek/etc.), I was thinking to jump into the playground to get some hands-on experience with vision transformers. So there will be a series of this hobby project and this will serve as part 1. Note that this is not a tutorial, view it more as a diary of when I work on a hobby project. This means that part 1 can have a lot of bugs which part 2 solves. Or if I find a cool solution to a problem I will write about it. 
+Since I have seen what the transformer architecture is capable of and its fundamental role in LLMs (for those who don’t know what those are they are the engine within ChatGPT/Gemini/Claude/Deepseek/etc.), I was thinking of jumping into the playground to get some hands-on experience with vision transformers. So there will be a series of this hobby project and this will serve as part 1. Note that this is not a tutorial, view it more as a diary of my work on a hobby project. This means that part 1 can have a lot of bugs which part 2 solves. Or if I find a cool solution to a problem I will write about it. 
 I will try to post at least weekly or bi-weekly.
 
 ## Project goal
 
 - Run a vision transformer model using ONNX and do something with a realtime video feed recorded by my camera e.g. segmentation or object detection.
-- Build a simple GUI (e.g. with ImGUI) to do something interactively with the input or output of the transformer model. Render the result in realtime/interactive in a seperate window.
+- Build a simple GUI (e.g. with ImGUI) to do something interactively with the input or output of the transformer model. Render the result in realtime/interactive in a separate window.
 - Use some C++17 and/or C++20 features for practice.
 - Primarily focus on making it work on CPU. Then on GPU/CUDA.
 - Later on when we finished we might consider combining multiple components e.g. let the vision transformer serve as a backbone and adding a front-end module or add some kind of embedding module, or other things to extend the project.
 
-The goals are not set in stone and can be tweaked if we find something too cool to ignore that we want to focus on, in that case we will ditch the other stuffs. We basically let whatever cool ideas come up guide the direction.
+The goals are not set in stone and can be tweaked if we find something too cool to ignore that we want to focus on, in that case we will ditch the other stuff. We basically let whatever cool ideas come up guide the direction.
 
 ## Dependencies
 
@@ -80,7 +80,7 @@ if(onnxruntime_FOUND)
 endif()
 ```
 
-As you might noticed I had to setup a manual configuration of ONNX because find_package() didn't really find the correct libs since it kept looking in wrong directories.
+As you might have noticed I had to set up a manual configuration of ONNX because find_package() didn't really find the correct libs since it kept looking in wrong directories.
 
 I use Ninja to build the system. 
 
@@ -166,7 +166,7 @@ and reading the video stream like this:
 ...
 ```
 
-We might play around and do something cool in raw format (UVY) later on. Althought it is tiny 640x480 since I use a cheap Logitech webcam for my digital meetings. But for now we will stick with compressed MPJG/JPEG streams which is capable to output full HD.
+We might play around and do something cool in raw format (UVY) later on. Althought it is tiny 640x480 since I use a cheap Logitech webcam for my digital meetings. But for now we will stick with compressed MJPG/JPEG streams which is capable to output full HD.
 
 We can double-check the capacity using V4L2:
 
@@ -214,6 +214,6 @@ ioctl: VIDIOC_ENUM_FMT
 
 First phase done! We have OpenCV installed. ONNX installed and linked. Our camera rolling and video stream captured. A first setup looks like this:
 
-<img width="2034" height="1239" alt="Screenshot from 2025-08-23 16-48-08" src="https://github.com/user-attachments/assets/7b3a0cfc-c342-4e8d-8f15-6f149fa8bd90" />
+<img width="1020" height="620" alt="Screenshot from 2025-08-23" src="https://github.com/user-attachments/assets/7b3a0cfc-c342-4e8d-8f15-6f149fa8bd90" />
 
 That was it for this time. Next time I will dig into ONNX a bit. Never worked with it before.
