@@ -214,6 +214,6 @@ ioctl: VIDIOC_ENUM_FMT
 
 First phase done! We have OpenCV installed. ONNX installed and linked. Our camera rolling and video stream captured. A first setup looks like this:
 
-<img width="1020" height="620" alt="Screenshot from 2025-08-23" src="https://github.com/user-attachments/assets/7b3a0cfc-c342-4e8d-8f15-6f149fa8bd90" />
+<img width="510" height="310" alt="Screenshot from 2025-08-23" src="https://github.com/user-attachments/assets/7b3a0cfc-c342-4e8d-8f15-6f149fa8bd90" />
 
 That was it for this time. Next time I will dig into ONNX a bit. Never worked with it before.
