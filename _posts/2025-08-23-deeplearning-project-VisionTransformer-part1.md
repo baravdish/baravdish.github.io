@@ -12,7 +12,7 @@ I will try to post at least weekly or bi-weekly.
 
 - Run a vision transformer model using ONNX and do something with a realtime video feed recorded by my camera e.g. segmentation or object detection.
 - Build a simple GUI (e.g. with ImGUI) to do something interactively with the input or output of the transformer model. Render the result in realtime/interactive in a separate window.
-- Use some C++17 and/or C++20 features for practice.
+- Use C++20 features or above for practice.
 - Primarily focus on making it work on CPU. Then on GPU/CUDA.
 - Later on when we finished we might consider combining multiple components e.g. let the vision transformer serve as a backbone and adding a front-end module or add some kind of embedding module, or other things to extend the project.
 
