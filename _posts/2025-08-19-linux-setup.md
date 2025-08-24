@@ -19,6 +19,8 @@ Some of my favorite tools are:
 - darktable (for viewing HDR or .exr images)
 - LM-studio (a local and private LLM chat app, thinking of making a tutorial of it later on)
 - Backblaze (cheap AWS, cloud bucket sync of all my data and datasets)
+- mitsuba renderer
+- pbrt renderer
 - blender
 - zotero (for organizing papers)
 - cuda (I love GPU programming)
