@@ -35,7 +35,7 @@ we can also see that the model uses a hierarchial transformer similar to traditi
 The hierarchical feature maps are downsampled with the scales (H/4, W/4), (H/8, W/8), ... (H/32,W/32). 
 
 Their Efficient Self-attention module from the paper is:
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/885222c7-1d83-4aee-8841-a3e0b826905f" />
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/885222c7-1d83-4aee-8841-a3e0b826905f" />
 
 In short: reshape and learn weights of linear layer that reduce the dimension such that the `O(N^2)` becomes `O(N^2 / R)` e.g. original `K`: 1024×64, reshape and learn its reduced form `16x64` the attention is then based on 1024x16 instead of 1024x1024. The reduction is smaller and smaller for each stage.
 
