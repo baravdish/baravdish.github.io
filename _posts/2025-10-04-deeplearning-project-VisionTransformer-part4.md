@@ -7,6 +7,7 @@ The decoder is simple. Each feature map from all the four stages is processed th
 We then concatenate all of them so we should expect to end up with a channel size `4C` of the four stages. Again, we use a linear layer to fuse the channels and go from `4C` to a single channel `C`. 
 Finally, we predict the semgentation for `N` classes.
 
+```
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -66,6 +67,7 @@ class SegFormerDecoder(nn.Module):
         out = self.linear_pred(f) 
         
         return out
+```
 
 This is the mental model I use. I like to think in PyTorch as it is cleaner to sketch mental code and simpler to read. We will see how it translates to C++ and ONNX later on.
 Something to note is linear layer + permutation vs 1x1 2D convolutions which probably is faster computationally. 
