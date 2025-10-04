@@ -34,36 +34,36 @@ class SegFormerDecoder(nn.Module):
         B, _, H, W = f1.shape 
     
         
-        _f4 = f4.permute(0, 2, 3, 1)
-        _f4 = self.linear_c4(_f4)
-        _f4 = _f4.permute(0, 3, 1, 2)
+        f4 = f4.permute(0, 2, 3, 1)
+        f4 = self.linear_c4(f4)
+        f4 = f4.permute(0, 3, 1, 2)
         
-        _f3 = f3.permute(0, 2, 3, 1)
-        _f3 = self.linear_c3(_f3)
-        _f3 = _f3.permute(0, 3, 1, 2)
+        f3 = f3.permute(0, 2, 3, 1)
+        f3 = self.linear_c3(f3)
+        f3 = f3.permute(0, 3, 1, 2)
         
-        _f2 = f2.permute(0, 2, 3, 1)
-        _f2 = self.linear_c2(_f2)
-        _f2 = _f2.permute(0, 3, 1, 2)
+        f2 = f2.permute(0, 2, 3, 1)
+        f2 = self.linear_c2(f2)
+        f2 = f2.permute(0, 3, 1, 2)
         
-        _f1 = f1.permute(0, 2, 3, 1)
-        _f1 = self.linear_c1(_f1)
-        _f1 = _f1.permute(0, 3, 1, 2)
+        f1 = f1.permute(0, 2, 3, 1)
+        f1 = self.linear_c1(f1)
+        f1 = f1.permute(0, 3, 1, 2)
         
-        # Upsample all to H/4 x W/4
-        _f4 = F.interpolate(_f4, size=(H, W), mode='bilinear', align_corners=False)
-        _f3 = F.interpolate(_f3, size=(H, W), mode='bilinear', align_corners=False)
-        _f2 = F.interpolate(_f2, size=(H, W), mode='bilinear', align_corners=False)
-        # _f1 already H/4 x W/4
+        # Upsample all to H/4xW/4
+        f4 = F.interpolate(f4, size=(H, W), mode='bilinear', align_corners=False)
+        f3 = F.interpolate(f3, size=(H, W), mode='bilinear', align_corners=False)
+        f2 = F.interpolate(f2, size=(H, W), mode='bilinear', align_corners=False)
+        # f1 already H/4xW/4
         
         # Concatenate
-        _f = torch.cat([_f4, _f3, _f2, _f1], dim=1)  # [B, 4*embed_dim, H, W]
+        f = torch.cat([f4, f3, f2, f1], dim=1)  # [B, 4*embed_dim, H, W]
         
-        _f = self.linear_fuse(_f)
-        _f = self.bn(_f)
-        _f = F.relu(_f)
+        f = self.linear_fuse(f)
+        f = self.bn(f)
+        f = F.relu(f)
         
-        out = self.linear_pred(_f) 
+        out = self.linear_pred(f) 
         
         return out
 
