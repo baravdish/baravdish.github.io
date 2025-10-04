@@ -3,16 +3,16 @@ layout: post
 title: "Deep learning project - Vision Transformer part 4"
 ---
 
-The decoder is simple. Each feature map from all the four stages is processed through a linear layer and we end up with pixel-wise logits with a common channel size `C`. We then upsample the feature maps to a single size `(H/4, W/4)`, meaning `(H/16, W/16)` we upsample that one x4 and for `(H/32, W/32)` we upsample it x8.
+The decoder is simple. Each feature map from all the four stages is processed through a linear layer and we end up with pixel-wise logits with a common channel size `C` for each map. We then upsample the feature maps to a single size `(H/4, W/4)`, meaning `(H/16, W/16)` we upsample that one x4 and for `(H/32, W/32)` we upsample it x8.
 We then concatenate all of them so we should expect to end up with a channel size `4C` of the four stages. Again, we use a linear layer to fuse the channels and go from `4C` to a single channel `C`. 
-Finally, we predict the classes for semgentation be it `N` classes.
+Finally, we predict the semgentation for `N` classes.
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 class SegFormerDecoder(nn.Module):
-    def __init__(self, in_channels=[64, 128, 320, 512], embed_dim=256, num_classes=10):
+    def __init__(self, in_channels=[32, 64, 160, 256], embed_dim=256, num_classes=150):
     
         super().__init__()
         
@@ -67,5 +67,5 @@ class SegFormerDecoder(nn.Module):
         
         return out
 
-This is the mental model we will use. I like to think in PyTorch as it is cleaner to sketch mental code and simpler to read. We will see how it translates to C++ and ONNX later on.
+This is the mental model I use. I like to think in PyTorch as it is cleaner to sketch mental code and simpler to read. We will see how it translates to C++ and ONNX later on.
 Something to note is linear layer + permutation vs 1x1 2D convolutions which probably is faster computationally. 
